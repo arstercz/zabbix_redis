@@ -21,7 +21,7 @@ ZABBIX_DIR="/etc/zabbix/zabbix_agentd.d"
 cp -a /usr/local/zabbix_redis/templates/userparameter_discovery_redis.conf $ZABBIX_DIR/
 echo "1) # cp -a /usr/local/zabbix_redis/templates/userparameter_discovery_redis.conf $ZABBIX_DIR/"
 echo
-chmod +x /usr/local/zabbix_redis/bin/*.{sh}
+chmod +x /usr/local/zabbix_redis/bin/*.sh
 echo "2) # chmod +x /usr/local/zabbix_redis/bin/*.{sh}"
 echo
 chmod +s /bin/netstat
