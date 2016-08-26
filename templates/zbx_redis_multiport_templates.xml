@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2016-08-26T09:18:57Z</date>
+    <date>2016-08-26T11:29:51Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -55,7 +55,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},blocked_clients]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -93,7 +93,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},client_biggest_input_buf]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -131,7 +131,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},client_longest_output_list]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -169,7 +169,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},total_commands_processed]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -207,7 +207,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},connected_clients]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -245,7 +245,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},connected_slaves]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -283,7 +283,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},total_connections_received]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -321,7 +321,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},evicted_keys]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -359,7 +359,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},expired_keys]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -397,7 +397,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},instantaneous_ops_per_sec]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -435,7 +435,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},keyspace_hits]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -473,7 +473,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},keyspace_misses]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -511,7 +511,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},rdb_last_save_time]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -549,7 +549,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},loading]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -587,7 +587,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},lru_clock]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -625,7 +625,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},pubsub_channels]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -663,7 +663,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},rdb_changes_since_last_save]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -701,7 +701,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},rejected_connections]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -777,7 +777,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},slave_ok]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -815,7 +815,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>net.tcp.listen[{#REDISPORT}]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -853,7 +853,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},uptime_in_seconds]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -891,7 +891,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},used_cpu_sys]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -929,7 +929,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},used_cpu_sys_children]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -967,7 +967,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},used_cpu_user]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -1005,7 +1005,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},used_cpu_user_children]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -1043,7 +1043,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},used_memory]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -1081,7 +1081,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},used_memory_peak]</key>
-                            <delay>60</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -1119,7 +1119,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid/>
                             <key>redis_stats[{#REDISPORT},used_memory_rss]</key>
-                            <delay>30</delay>
+                            <delay>180</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
