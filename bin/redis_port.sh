@@ -18,7 +18,7 @@ netstat -tunlp | grep redis | perl -ne '
          $i++;
          $data .= "\{\"{#REDISPORT}\":\"$key\"\}";
          $data .= $i == keys %redis_port
-               ?  "[}"
+               ?  "]}"
                :  ",";
       }
       print $data;
