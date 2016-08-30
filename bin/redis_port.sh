@@ -4,7 +4,7 @@
 exec 2>&1
 set -e
 
-netstat -tunlp | grep redis | perl -ne '
+netstat -tunlp | grep redis-server | perl -ne '
    BEGIN{
       my $i = 0;
       my %redis_port;
