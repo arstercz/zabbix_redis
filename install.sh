@@ -18,6 +18,11 @@ ZABBIX_DIR="/etc/zabbix/zabbix_agentd.d"
    exit 1
 }
 
+[[ $(/usr/bin/which nc 2>/dev/null) ]] || {
+   echo "need nc command."
+   exit 1
+}
+
 cp -a /usr/local/zabbix_redis/templates/userparameter_discovery_redis.conf $ZABBIX_DIR/
 echo "1) # cp -a /usr/local/zabbix_redis/templates/userparameter_discovery_redis.conf $ZABBIX_DIR/"
 echo
