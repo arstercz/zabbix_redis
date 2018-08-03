@@ -34,7 +34,7 @@ redis_slowlog() {
        BEGIN {
           use POSIX qw(strftime);
        }
-       s/(?:\*|:|\$|\r\n)//g;
+       s/(?:^\*|^:|^\$|\r\n)//g;
        chomp;
        $n++;
        $p = 0;
