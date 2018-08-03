@@ -26,6 +26,42 @@ redis_info() {
    (echo -en "INFO\r\n"; sleep 1) | nc -w1 127.0.0.1 $1 >> $2 || exit 1
 }
 
+redis_slowlog() {
+  export CACHETTL=$2
+  (echo -en "SLOWLOG GET 1\r\n"; sleep 0.2) | \
+     nc -w1 127.0.0.1 $1 | \
+     perl -ne '
+       BEGIN {
+          use POSIX qw(strftime);
+       }
+       s/(?:\*|:|\$|\r\n)//g;
+       chomp;
+       $n++;
+       $p = 0;
+       $r{len}   = $_ if $n == 1;
+       $r{items} = $_ if $n == 2;
+       $r{seq}   = $_ if $n == 3;
+       $r{time}  = $_ if $n == 4;
+       $r{slow}  = $_ if $n == 5;
+       $p        = $_ if $n == 6;
+       if ($n > 6) {
+          if (($n - 2 * $p) % 2 == 0) {
+             $r{command} .= "$_ ";
+          }
+       }
+       END{
+          if ( time() - $r{time} <= $ENV{CACHETTL} ) {
+             print "redis slowlog: " . "\n"
+                   . "\tlasttime: " 
+                   . strftime("%Y-%m-%dT%H:%M:%S", localtime($r{time})) . "\n"
+                   . "\tcommand:  " . $r{command} . "\n"
+                   . "\trun-time: " . $r{slow} . "ms\n"; 
+          }
+       }
+
+     '
+}
+
 if [ -s "$CACHEFILE" ]; then
    TIMECACHE=`stat -c %Y "$CACHEFILE"`
    TIMENOW=`date +%s`
@@ -136,6 +172,9 @@ case $METRIC in
         ;;
     'aof_rewrite_scheduled')
         cat $CACHEFILE | grep "aof_rewrite_scheduled:" | cut -d':' -f2
+        ;;
+    'slow_log')
+        redis_slowlog $1 $CACHETTL
         ;;
     'slave_ok')
         ROLE=$(cat $CACHEFILE | grep "role" | cut -d':' -f2 | sed -e 's/\r//g')

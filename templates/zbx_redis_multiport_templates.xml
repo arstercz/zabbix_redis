@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2016-08-26T11:29:51Z</date>
+    <date>2018-08-03T04:16:35Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -16,7 +16,11 @@
                     <name>Templates</name>
                 </group>
             </groups>
-            <applications/>
+            <applications>
+                <application>
+                    <name>redis_zabbix</name>
+                </application>
+            </applications>
             <items/>
             <discovery_rules>
                 <discovery_rule>
@@ -85,6 +89,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Client biggest input buf</name>
@@ -123,6 +128,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Client longest outout list</name>
@@ -161,6 +167,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Commands processes</name>
@@ -199,6 +206,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Connected clients</name>
@@ -237,6 +245,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Connected slave</name>
@@ -275,6 +284,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Connection rate</name>
@@ -313,6 +323,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 port Evicted_keys</name>
@@ -351,6 +362,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Expired keys</name>
@@ -389,6 +401,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Instanceous ops per sec</name>
@@ -427,6 +440,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Keyspace hits</name>
@@ -465,6 +479,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Keyspace misses</name>
@@ -503,6 +518,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Last Save Time</name>
@@ -541,6 +557,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Loading</name>
@@ -579,6 +596,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Lru lock</name>
@@ -617,6 +635,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Pubsub channel</name>
@@ -655,6 +674,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Rdb last save Time</name>
@@ -693,6 +713,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Reject connections</name>
@@ -731,6 +752,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Role</name>
@@ -769,6 +791,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Slave ok</name>
@@ -807,6 +830,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Status</name>
@@ -843,8 +867,13 @@
                             <port/>
                             <description/>
                             <inventory_link>0</inventory_link>
-                            <applications/>
+                            <applications>
+                                <application>
+                                    <name>redis_zabbix</name>
+                                </application>
+                            </applications>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Uptime in seconds</name>
@@ -883,6 +912,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Used cpu sys</name>
@@ -921,6 +951,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Used cpu sys children</name>
@@ -959,6 +990,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Used cpu user</name>
@@ -997,6 +1029,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Used cpu user children</name>
@@ -1035,6 +1068,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Used memory</name>
@@ -1073,6 +1107,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Used memory peak</name>
@@ -1111,6 +1146,7 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
                             <name>Redis $1 Port Used_memory_rss</name>
@@ -1149,6 +1185,50 @@
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
+                            <logtimefmt/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Redis $1 Slow Log</name>
+                            <type>0</type>
+                            <snmp_community/>
+                            <multiplier>0</multiplier>
+                            <snmp_oid/>
+                            <key>redis_stats[{#REDISPORT},slow_log]</key>
+                            <delay>180</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>4</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>redis lastest slow log</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>redis_zabbix</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
@@ -1167,6 +1247,15 @@
                             <url/>
                             <status>0</status>
                             <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Redis_zabbix:redis_stats[{#REDISPORT},slow_log].str(slowlog)}=1</expression>
+                            <name>Redis {#REDISPORT} Slow Log</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>3</priority>
                             <description/>
                             <type>0</type>
                         </trigger_prototype>
@@ -1239,7 +1328,7 @@
                                     <drawtype>0</drawtype>
                                     <color>C80000</color>
                                     <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
+                                    <calc_fnc>7</calc_fnc>
                                     <type>0</type>
                                     <item>
                                         <host>Redis_zabbix</host>
@@ -1251,7 +1340,7 @@
                                     <drawtype>0</drawtype>
                                     <color>00C800</color>
                                     <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
+                                    <calc_fnc>7</calc_fnc>
                                     <type>0</type>
                                     <item>
                                         <host>Redis_zabbix</host>
@@ -1263,7 +1352,7 @@
                                     <drawtype>0</drawtype>
                                     <color>0000C8</color>
                                     <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
+                                    <calc_fnc>7</calc_fnc>
                                     <type>0</type>
                                     <item>
                                         <host>Redis_zabbix</host>
@@ -1275,7 +1364,7 @@
                                     <drawtype>0</drawtype>
                                     <color>00C8C8</color>
                                     <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
+                                    <calc_fnc>7</calc_fnc>
                                     <type>0</type>
                                     <item>
                                         <host>Redis_zabbix</host>
@@ -1287,7 +1376,7 @@
                                     <drawtype>0</drawtype>
                                     <color>C8C800</color>
                                     <yaxisside>0</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
+                                    <calc_fnc>7</calc_fnc>
                                     <type>0</type>
                                     <item>
                                         <host>Redis_zabbix</host>
