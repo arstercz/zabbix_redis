@@ -55,7 +55,7 @@ redis_slowlog() {
                    . "\tlasttime: " 
                    . strftime("%Y-%m-%dT%H:%M:%S", localtime($r{time})) . "\n"
                    . "\tcommand:  " . $r{command} . "\n"
-                   . "\trun-time: " . $r{slow} . "ms\n"; 
+                   . "\trun-time: " . $r{slow} . "us\n"; 
           }
        }
 
