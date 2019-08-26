@@ -9,8 +9,8 @@
 Configure Redis connectivity on Zabbix Agent
 
 ```
-    1. # git clone https://github.com/chenzhe07/zabbix_redis.git /usr/local/zabbix_redis
-    2. # bash /usr/local/zabbix_redis/install.sh
+1. # git clone https://github.com/arstercz/zabbix_redis.git /usr/local/zabbix_redis
+2. # bash /usr/local/zabbix_redis/install.sh
 ```
 
 * note: redis should be listen on 127.0.0.1 or 0.0.0.0.

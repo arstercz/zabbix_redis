@@ -95,11 +95,13 @@ case $METRIC in
         memory_freebyte=$(($memory_free*1024))
         echo -n "$memory_freebyte $memory_set" | perl -ne '
             my ($free, $dataset) = split(/\s+/, $_);
+            my $freemb = int($free / 1024 / 1024);
+            my $datasetmb = int($dataset / 1024/ 1024);
             if ($free >= $dataset) {
-                print "OK: redis_memory_dataset: $memory_set KB, system_free_memory: $memory_free KB"
+                print "OK: redis_memory_dataset: $datasetmb MB, system_free_memory: $freemb MB"
             }
             else {
-                print "ERROR: free memory is too low. redis_memory_dataset: $memory_set byte, system_free_memory: $memory_free byte"
+                print "ERROR: free memory is too low. redis_memory_dataset: $datasetmb byte, system_free_memory: $freemb byte"
             }
         '
         ;;
