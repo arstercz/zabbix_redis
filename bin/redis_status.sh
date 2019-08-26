@@ -86,6 +86,23 @@ case $METRIC in
     'used_memory_rss')
         cat $CACHEFILE | grep "used_memory_rss:" | cut -d':' -f2
         ;;
+    'is_memory_ok')
+        memory_used=$(cat $CACHEFILE | grep "used_memory:" | cut -d':' -f2)
+        # redis higher version has the used_memory_dataset
+        memory_set=$(cat $CACHEFILE | grep 'used_memory_dataset:' | cut -d ':' -f2)
+        memory_set=${memory_set:-$memory_used}
+        memory_free=$(grep -P '^(?:MemFree|Buffers|Cached)' /proc/meminfo | awk '{ sum += $2 } END{ print sum }')
+        memory_freebyte=$(($memory_free*1024))
+        echo -n "$memory_freebyte $memory_set" | perl -ne '
+            my ($free, $dataset) = split(/\s+/, $_);
+            if ($free >= $dataset) {
+                print "OK: redis_memory_dataset: $memory_set KB, system_free_memory: $memory_free KB"
+            }
+            else {
+                print "ERROR: free memory is too low. redis_memory_dataset: $memory_set byte, system_free_memory: $memory_free byte"
+            }
+        '
+        ;;
     'mem_fragmentation_ratio')
         cat $CACHEFILE | grep "mem_fragmentation_ratio:" | cut -d':' -f2
         ;;
